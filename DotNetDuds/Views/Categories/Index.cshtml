@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DotNetDuds.Models.Category>
+ @*IEnumerable is used to transfer list*@
+<h1>View</h1>
+
+<ul>
+    @foreach(var category in Model)
+    {
+    <li>
+        <a asp-controller="Categories" asp-action="Browse" asp-route-category="@category.Name">
+            @category.Name
+        </a>
+    </li>
+    }
+    @*<li>
+            <a asp-controller="Categories" asp-action="Browse" asp-route-category="Category1"> category 1</a>
+        </li>
+        <li>
+            <a asp-controller="Categories" asp-action="Browse" asp-route-category="Category2">  category 2</a>
+        </li>
+        <li>
+             <a asp-controller="Categories" asp-action="Browse" asp-route-category="Category3">  category 3</a>
+        </li>*@
+</ul>
